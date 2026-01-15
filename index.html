@@ -12,71 +12,74 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #cfd9df, #e2ebf0);
       font-family: "Segoe UI", sans-serif;
       text-align: center;
+      transition: background 0.6s ease;
+      background: #ffd6d6;
     }
 
-    .card {
+    .box {
       background: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      padding: 35px;
+      border-radius: 25px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
       max-width: 420px;
       width: 90%;
     }
 
     h1 {
-      color: #ff5c8a;
-      margin-bottom: 10px;
+      color: #ff4d6d;
+      margin-bottom: 15px;
     }
 
     p {
-      font-size: 17px;
+      font-size: 18px;
       color: #444;
-    }
-
-    input[type="range"] {
-      width: 100%;
-      margin: 25px 0;
+      min-height: 80px;
     }
 
     .emoji {
-      font-size: 50px;
-      margin: 10px 0;
+      font-size: 60px;
+      margin: 15px 0;
     }
 
-    .message {
+    button {
+      margin-top: 20px;
       font-size: 18px;
-      margin-top: 15px;
-      color: #333;
-      min-height: 60px;
+      padding: 12px 30px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      background: #ff4d6d;
+      color: white;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
     }
 
     .from {
       margin-top: 20px;
       font-weight: bold;
-      color: #555;
+      color: #666;
     }
   </style>
 </head>
 <body>
 
-  <div class="card">
+  <div class="box">
     <h1>Hey Harika 💙</h1>
-    <p>
-      I know you’re angry 😔<br>
-      I’m not here to argue.<br>
-      I just want to make things a little lighter.
-    </p>
 
     <div class="emoji" id="emoji">😠</div>
 
-    <input type="range" min="0" max="100" value="100" id="anger" oninput="updateMood()">
+    <p id="text">
+      I know you’re angry.<br>
+      I’m not here to fight.<br>
+      I just want to be here for you.
+    </p>
 
-    <div class="message" id="message">
-      Okay… I deserve this anger 🔥
-    </div>
+    <button onclick="nextMood()">I’m still angry 😠</button>
 
     <div class="from">
       — Navdeep
@@ -84,31 +87,40 @@
   </div>
 
   <script>
-    function updateMood() {
-      const value = document.getElementById("anger").value;
-      const emoji = document.getElementById("emoji");
-      const message = document.getElementById("message");
+    let step = 0;
 
-      if (value > 70) {
-        emoji.innerHTML = "😠";
-        message.innerHTML = "Okay… I deserve this anger 🔥";
-      } 
-      else if (value > 40) {
+    function nextMood() {
+      const emoji = document.getElementById("emoji");
+      const text = document.getElementById("text");
+
+      if (step === 0) {
+        document.body.style.background = "#ffeaa7";
         emoji.innerHTML = "😐";
-        message.innerHTML = "One smile unlocked 🐻";
+        text.innerHTML = `
+          Okay… I understand.<br>
+          Your feelings matter to me.
+        `;
       } 
-      else if (value > 10) {
+      else if (step === 1) {
+        document.body.style.background = "#dff9fb";
         emoji.innerHTML = "😊";
-        message.innerHTML = "I owe you ice cream 🍦";
+        text.innerHTML = `
+          Thank you for staying here.<br>
+          Your smile means everything to me.
+        `;
       } 
       else {
+        document.body.style.background = "#ffdff0";
         emoji.innerHTML = "💖";
-        message.innerHTML = `
-          Even if you're still upset,<br>
-          I care about you.<br>
-          Take your time 🤍
+        text.innerHTML = `
+          Even if you’re still upset,<br>
+          I care about you deeply.<br>
+          Take all the time you need 🤍
         `;
+        document.querySelector("button").style.display = "none";
       }
+
+      step++;
     }
   </script>
 
