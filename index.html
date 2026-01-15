@@ -2,12 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Harika 💖 Navdeep</title>
-
-  <!-- Romantic background music -->
-  <audio autoplay loop>
-    <source src="https://files.catbox.moe/6j9l0s.mp3" type="audio/mpeg">
-  </audio>
+  <title>For Harika 💙</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
@@ -16,99 +12,103 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      background: linear-gradient(135deg, #cfd9df, #e2ebf0);
       font-family: "Segoe UI", sans-serif;
       text-align: center;
     }
 
-    .box {
+    .card {
       background: white;
-      padding: 40px;
-      border-radius: 25px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-      max-width: 400px;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      max-width: 420px;
+      width: 90%;
     }
 
     h1 {
-      color: #ff3366;
-      margin-bottom: 20px;
+      color: #ff5c8a;
+      margin-bottom: 10px;
     }
 
     p {
-      font-size: 18px;
+      font-size: 17px;
       color: #444;
-      margin-bottom: 30px;
     }
 
-    button {
-      font-size: 22px;
-      padding: 12px 35px;
-      border-radius: 40px;
-      border: none;
-      cursor: pointer;
-      margin: 10px;
-      transition: all 0.3s ease;
+    input[type="range"] {
+      width: 100%;
+      margin: 25px 0;
     }
 
-    #yes {
-      background: #ff3366;
-      color: white;
+    .emoji {
+      font-size: 50px;
+      margin: 10px 0;
     }
 
-    #no {
-      background: #999;
-      color: white;
+    .message {
+      font-size: 18px;
+      margin-top: 15px;
+      color: #333;
+      min-height: 60px;
+    }
+
+    .from {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #555;
     }
   </style>
 </head>
 <body>
 
-  <div class="box">
-    <h1>Harika 💖</h1>
+  <div class="card">
+    <h1>Hey Harika 💙</h1>
     <p>
-      From the moment you came into my life,<br>
-      everything became more beautiful 🌸<br><br>
-      Will you be my Valentine?
+      I know you’re angry 😔<br>
+      I’m not here to argue.<br>
+      I just want to make things a little lighter.
     </p>
 
-    <button id="yes" onclick="yesClicked()">YES 💕</button>
-    <button id="no" onclick="noClicked()">NO 😢</button>
+    <div class="emoji" id="emoji">😠</div>
+
+    <input type="range" min="0" max="100" value="100" id="anger" oninput="updateMood()">
+
+    <div class="message" id="message">
+      Okay… I deserve this anger 🔥
+    </div>
+
+    <div class="from">
+      — Navdeep
+    </div>
   </div>
 
   <script>
-    let noSize = 22;
+    function updateMood() {
+      const value = document.getElementById("anger").value;
+      const emoji = document.getElementById("emoji");
+      const message = document.getElementById("message");
 
-    function noClicked() {
-      noSize -= 3;
-      if (noSize < 6) noSize = 6;
-      document.getElementById("no").style.fontSize = noSize + "px";
-    }
-
-    function yesClicked() {
-      document.body.innerHTML = `
-        <div style="
-          height:100vh;
-          width:100%;
-          display:flex;
-          justify-content:center;
-          align-items:center;
-          background:linear-gradient(135deg,#ff9a9e,#fad0c4);
-          font-family:'Segoe UI',sans-serif;
-          text-align:center;
-          padding:20px;
-        ">
-          <div>
-            <h1 style="color:#ff3366;font-size:42px;">
-              Yayyy Harika! 💕
-            </h1>
-            <p style="font-size:22px;color:#444;">
-              You just made me the happiest person alive 😘<br><br>
-              Forever yours,<br>
-              <b>Navdeep ❤️</b>
-            </p>
-          </div>
-        </div>
-      `;
+      if (value > 70) {
+        emoji.innerHTML = "😠";
+        message.innerHTML = "Okay… I deserve this anger 🔥";
+      } 
+      else if (value > 40) {
+        emoji.innerHTML = "😐";
+        message.innerHTML = "One smile unlocked 🐻";
+      } 
+      else if (value > 10) {
+        emoji.innerHTML = "😊";
+        message.innerHTML = "I owe you ice cream 🍦";
+      } 
+      else {
+        emoji.innerHTML = "💖";
+        message.innerHTML = `
+          Even if you're still upset,<br>
+          I care about you.<br>
+          Take your time 🤍
+        `;
+      }
     }
   </script>
 
