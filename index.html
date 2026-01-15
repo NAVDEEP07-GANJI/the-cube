@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>For Harika 💙</title>
+  <title>A Calm Place</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -12,117 +12,98 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      background: linear-gradient(180deg, #f5f7fa, #e6ecf2);
       font-family: "Segoe UI", sans-serif;
-      text-align: center;
-      transition: background 0.6s ease;
-      background: #ffd6d6;
+      color: #333;
     }
 
-    .box {
-      background: white;
-      padding: 35px;
-      border-radius: 25px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-      max-width: 420px;
+    .container {
+      max-width: 520px;
       width: 90%;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      animation: fadeIn 2s ease;
     }
 
     h1 {
-      color: #ff4d6d;
-      margin-bottom: 15px;
+      font-weight: 500;
+      margin-bottom: 25px;
+      color: #444;
     }
 
     p {
       font-size: 18px;
-      color: #444;
-      min-height: 80px;
+      line-height: 1.7;
+      margin-bottom: 18px;
     }
 
-    .emoji {
-      font-size: 60px;
-      margin: 15px 0;
-    }
-
-    button {
-      margin-top: 20px;
-      font-size: 18px;
-      padding: 12px 30px;
-      border-radius: 30px;
-      border: none;
-      cursor: pointer;
-      background: #ff4d6d;
-      color: white;
-      transition: transform 0.2s;
-    }
-
-    button:hover {
-      transform: scale(1.05);
+    .soft {
+      color: #666;
     }
 
     .from {
-      margin-top: 20px;
-      font-weight: bold;
-      color: #666;
+      margin-top: 30px;
+      font-weight: 500;
+      color: #555;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="box">
-    <h1>Hey Harika 💙</h1>
+  <div class="container">
+    <h1>Harika,</h1>
 
-    <div class="emoji" id="emoji">😠</div>
-
-    <p id="text">
-      I know you’re angry.<br>
-      I’m not here to fight.<br>
-      I just want to be here for you.
+    <p>
+      I know you’re upset.  
+      And I want you to know that I understand why.
     </p>
 
-    <button onclick="nextMood()">I’m still angry 😠</button>
+    <p class="soft">
+      I’m not opening this page to argue, explain myself,  
+      or ask you to forgive me.
+    </p>
 
-    <div class="from">
+    <p>
+      I realise that I may not have listened properly,  
+      and I might have spoken when I should have understood first.
+    </p>
+
+    <p class="soft">
+      This is me taking responsibility — quietly.
+    </p>
+
+    <p>
+      Even if you’re still angry after reading this,  
+      your feelings matter to me.
+    </p>
+
+    <p class="soft">
+      You don’t have to reply.  
+      You don’t have to decide anything right now.
+    </p>
+
+    <p>
+      I just wanted you to know that  
+      I care about you — without conditions.
+    </p>
+
+    <p class="from">
       — Navdeep
-    </div>
+    </p>
   </div>
-
-  <script>
-    let step = 0;
-
-    function nextMood() {
-      const emoji = document.getElementById("emoji");
-      const text = document.getElementById("text");
-
-      if (step === 0) {
-        document.body.style.background = "#ffeaa7";
-        emoji.innerHTML = "😐";
-        text.innerHTML = `
-          Okay… I understand.<br>
-          Your feelings matter to me.
-        `;
-      } 
-      else if (step === 1) {
-        document.body.style.background = "#dff9fb";
-        emoji.innerHTML = "😊";
-        text.innerHTML = `
-          Thank you for staying here.<br>
-          Your smile means everything to me.
-        `;
-      } 
-      else {
-        document.body.style.background = "#ffdff0";
-        emoji.innerHTML = "💖";
-        text.innerHTML = `
-          Even if you’re still upset,<br>
-          I care about you deeply.<br>
-          Take all the time you need 🤍
-        `;
-        document.querySelector("button").style.display = "none";
-      }
-
-      step++;
-    }
-  </script>
 
 </body>
 </html>
