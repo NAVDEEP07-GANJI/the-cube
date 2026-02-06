@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Things I Love About You 💗</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #ffe4ec, #ffd6c9);
+      color: #444;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: auto;
+      padding: 60px 25px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff5f7e;
+      margin-bottom: 40px;
+      font-weight: 600;
+    }
+
+    .line {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 28px 0;
+      background: rgba(255,255,255,0.6);
+      padding: 18px 22px;
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(255, 105, 135, 0.15);
+    }
+
+    .line.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .emoji {
+      font-size: 22px;
+      margin-right: 6px;
+    }
+
+    .footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 18px;
+      color: #666;
+    }
+
+    .signature {
+      margin-top: 15px;
+      font-weight: 600;
+      color: #ff5f7e;
+    }
+
+    .decor {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="decor">🐱💗🐾🌸🐱✨</div>
+
+    <h1>Things I Love About You, Harika</h1>
+
+    <div class="line">🌸 The way you smile — it stays with me longer than the day itself.</div>
+
+    <div class="line">🐱 You’re effortlessly yourself, and that’s the most beautiful thing.</div>
+
+    <div class="line">✨ You’re a little weirdo in the best way — and I adore that.</div>
+
+    <div class="line">👀 Your eyes… they say things you never speak out loud.</div>
+
+    <div class="line">🫶 The comfort you bring just by being around — it feels like home.</div>
+
+    <div class="line">🌷 You make my worst days feel lighter without even trying.</div>
+
+    <div class="line">🐼 You’re my tiny panda — soft, warm, and oddly comforting.</div>
+
+    <div class="line">💗 You feel real. You never try to act cute — you just are.</div>
+
+    <div class="line">🧸 Your inner child, your childishness — it’s precious.</div>
+
+    <div class="line">🌙 Talking to you makes my day feel complete.</div>
+
+    <div class="line">🌊 Even when you’re quiet, I feel like there’s so much depth in you.</div>
+
+    <div class="line">🍦 The way you enjoy ice cream — that pure happiness.</div>
+
+    <div class="line">🐱 The way you eat, the way your cheeks lift — it’s impossibly adorable.</div>
+
+    <div class="line">💫 Your clumsiness — it makes you human and endearing.</div>
+
+    <div class="line">🌸 You’re mature, yet gentle. Strong, yet soft.</div>
+
+    <div class="line">✨ Your hair — those curls and waves — they feel like poetry.</div>
+
+    <div class="line">🐾 The way you walk — like a little kid lost but brave.</div>
+
+    <div class="line">🌟 You love deeply, even when you don’t show it.</div>
+
+    <div class="line">🍳 You care. You nurture. You would be an amazing mother one day.</div>
+
+    <div class="line">🔥 You’re passionate, a little mad, a little stubborn — and that’s okay.</div>
+
+    <div class="line">💖 You deserve the world, and I hope one day I can give you a part of it.</div>
+
+    <div class="line">🌌 In a sky full of stars, you somehow became the only moon I see.</div>
+
+    <div class="line">💗 I don’t know what the future holds… but what I feel for you is honest.</div>
+
+    <div class="line">🐱✨ No pressure. No expectations. Just feelings — quietly, sincerely.</div>
+
+    <div class="footer">
+      This page isn’t asking you for anything.<br>
+      It’s just a place where my feelings exist.
+      <div class="signature">— Navdeep 💗</div>
+    </div>
+
+  </div>
+
+  <script>
+    const lines = document.querySelectorAll('.line');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    lines.forEach(line => observer.observe(line));
+  </script>
+
+</body>
+</html>
