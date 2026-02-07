@@ -4,37 +4,25 @@
 <title>Teddy Day 🧸</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body{margin:0;height:100vh;background:#ffdced;font-family:'Segoe UI';overflow:hidden;text-align:center;}
-.container{padding:60px 20px;animation:fadeUp 1.5s;}
-h1{color:#ff3f7f;font-size:38px;}
-p{font-size:20px;color:#555;}
-a{color:#ff3f7f;font-weight:bold;text-decoration:none;}
-.heart{position:absolute;bottom:-20px;font-size:24px;animation:float 8s infinite;}
-@keyframes float{0%{transform:translateY(0);}100%{transform:translateY(-120vh);}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;}}
+body{margin:0;font-family:Segoe UI;background:linear-gradient(#fff0f6,#fff);text-align:center;color:#ff2e75}
+h1{font-size:3rem}
+p{font-size:1.4rem;max-width:850px;margin:30px auto}
+img.big{width:90%;max-width:450px;border-radius:30px;animation:float 4s infinite}
+a{display:inline-block;margin:50px;padding:18px 50px;font-size:1.4rem;background:linear-gradient(135deg,#ff4f8b,#ff9cc1);color:white;border-radius:50px;text-decoration:none;animation:heartbeat 1.6s infinite}
+@keyframes float{50%{transform:translateY(-15px)}}
+@keyframes heartbeat{50%{transform:scale(1.08)}}
 </style>
 </head>
 <body>
 
-<script>
-for(let i=0;i<25;i++){
- let h=document.createElement("div");
- h.className="heart";
- h.innerHTML="🧸";
- h.style.left=Math.random()*100+"vw";
- h.style.animationDuration=(6+Math.random()*6)+"s";
- document.body.appendChild(h);
-}
-</script>
-
-<div class="container">
-<h1>🧸 Teddy Day</h1>
+<h1>Teddy Day 🧸</h1>
 <p>
-Until I can give you one in person,<br>
-let this page hug you 🤍
+If I could, I’d give you a teddy that hugs you when I can’t.<br><br>
+Soft. Warm. Safe. Just like the comfort you give me.
 </p>
-<a href="day5.html">Next 🤞</a>
-</div>
 
+<img class="big" src="https://images.unsplash.com/photo-1601758064134-6b2c53c5bdb4">
+
+<a href="day5.html">Next feeling 💌</a>
 </body>
 </html>
