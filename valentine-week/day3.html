@@ -4,29 +4,31 @@
 <title>Chocolate Day 🍫</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body{margin:0;font-family:Segoe UI;background:linear-gradient(#ffe8d9,#fff);text-align:center;color:#ff2e75}
-h1{font-size:3rem}
-p{font-size:1.4rem;max-width:850px;margin:30px auto;line-height:1.7}
-img.big{width:90%;max-width:450px;border-radius:30px;box-shadow:0 20px 40px rgba(255,0,100,.3);animation:float 4s infinite}
-a{display:inline-block;margin:50px;padding:18px 50px;font-size:1.4rem;background:linear-gradient(135deg,#ff5c8a,#ff9bbd);color:white;border-radius:50px;text-decoration:none;animation:heartbeat 1.6s infinite}
-@keyframes float{50%{transform:translateY(-15px)}}
-@keyframes heartbeat{50%{transform:scale(1.08)}}
+body{margin:0;height:100vh;background:linear-gradient(#ffe8d9,#fff);font-family:Segoe UI;display:flex;justify-content:center;align-items:center;text-align:center;color:#ff2e75}
+.card{max-width:900px;padding:40px;animation:fadeIn 1.5s}
+h1{font-size:3.5rem}
+p{font-size:1.7rem;line-height:1.7;margin:35px 0}
+a{padding:18px 55px;background:linear-gradient(135deg,#ff6a95,#ffb1cd);color:white;border-radius:60px;text-decoration:none;font-size:1.4rem;animation:pulse 1.8s infinite}
+@keyframes fadeIn{from{opacity:0;transform:translateY(40px)}to{opacity:1}}
+@keyframes pulse{50%{transform:scale(1.08)}}
 </style>
 </head>
+
 <body>
-
+<div class="card">
 <h1>Chocolate Day 🍫</h1>
-<p>
-You’re sweet in ways chocolates can’t explain.<br><br>
-Comforting, calm, and addictive in the softest way.
-</p>
-
-<img class="big" src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55">
 
 <p>
-If happiness had a taste — it would feel like talking to you.
+Some people feel sweet because they try to be.<br>
+You feel sweet because you’re just… you.
 </p>
 
-<a href="day4.html">Next feeling 💌</a>
+<p>
+Talking to you feels like comfort,<br>
+and that’s rarer than anything.
+</p>
+
+<a href="day4.html">Next feeling 🤍</a>
+</div>
 </body>
 </html>
