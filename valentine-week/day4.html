@@ -4,25 +4,31 @@
 <title>Teddy Day 🧸</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body{margin:0;font-family:Segoe UI;background:linear-gradient(#fff0f6,#fff);text-align:center;color:#ff2e75}
-h1{font-size:3rem}
-p{font-size:1.4rem;max-width:850px;margin:30px auto}
-img.big{width:90%;max-width:450px;border-radius:30px;animation:float 4s infinite}
-a{display:inline-block;margin:50px;padding:18px 50px;font-size:1.4rem;background:linear-gradient(135deg,#ff4f8b,#ff9cc1);color:white;border-radius:50px;text-decoration:none;animation:heartbeat 1.6s infinite}
-@keyframes float{50%{transform:translateY(-15px)}}
-@keyframes heartbeat{50%{transform:scale(1.08)}}
+body{margin:0;height:100vh;background:linear-gradient(#fff0f6,#fff);font-family:Segoe UI;display:flex;justify-content:center;align-items:center;text-align:center;color:#ff2e75}
+.card{max-width:900px;padding:40px;animation:fadeIn 1.5s}
+h1{font-size:3.5rem}
+p{font-size:1.7rem;line-height:1.7;margin:35px 0}
+a{padding:18px 55px;background:linear-gradient(135deg,#ff5b95,#ffb6d2);color:white;border-radius:60px;text-decoration:none;font-size:1.4rem;animation:pulse 1.8s infinite}
+@keyframes fadeIn{from{opacity:0;transform:translateY(40px)}to{opacity:1}}
+@keyframes pulse{50%{transform:scale(1.08)}}
 </style>
 </head>
-<body>
 
+<body>
+<div class="card">
 <h1>Teddy Day 🧸</h1>
+
 <p>
-If I could, I’d give you a teddy that hugs you when I can’t.<br><br>
-Soft. Warm. Safe. Just like the comfort you give me.
+If I could give you something today,<br>
+it wouldn’t be a teddy.
 </p>
 
-<img class="big" src="https://images.unsplash.com/photo-1601758064134-6b2c53c5bdb4">
+<p>
+It would be the feeling of safety,<br>
+the kind where you don’t have to pretend.
+</p>
 
-<a href="day5.html">Next feeling 💌</a>
+<a href="day5.html">Next feeling 🌸</a>
+</div>
 </body>
 </html>
