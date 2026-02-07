@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Teddy Day 🧸</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{margin:0;height:100vh;background:#ffdced;font-family:'Segoe UI';overflow:hidden;text-align:center;}
+.container{padding:60px 20px;animation:fadeUp 1.5s;}
+h1{color:#ff3f7f;font-size:38px;}
+p{font-size:20px;color:#555;}
+a{color:#ff3f7f;font-weight:bold;text-decoration:none;}
+.heart{position:absolute;bottom:-20px;font-size:24px;animation:float 8s infinite;}
+@keyframes float{0%{transform:translateY(0);}100%{transform:translateY(-120vh);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;}}
+</style>
+</head>
+<body>
+
+<script>
+for(let i=0;i<25;i++){
+ let h=document.createElement("div");
+ h.className="heart";
+ h.innerHTML="🧸";
+ h.style.left=Math.random()*100+"vw";
+ h.style.animationDuration=(6+Math.random()*6)+"s";
+ document.body.appendChild(h);
+}
+</script>
+
+<div class="container">
+<h1>🧸 Teddy Day</h1>
+<p>
+Until I can give you one in person,<br>
+let this page hug you 🤍
+</p>
+<a href="day5.html">Next 🤞</a>
+</div>
+
+</body>
+</html>
