@@ -3,37 +3,79 @@
 <head>
 <title>Rose Day 🌹</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-body{margin:0;font-family:Segoe UI;background:linear-gradient(#ffd6e8,#fff);text-align:center;color:#ff2e75}
-h1{font-size:3rem}
-p{font-size:1.4rem;max-width:850px;margin:30px auto;line-height:1.7}
-img.big{width:90%;max-width:450px;border-radius:30px;box-shadow:0 20px 40px rgba(255,0,100,.3);animation:float 4s infinite}
-.cats img{width:140px;border-radius:20px;margin:10px}
-a{display:inline-block;margin:50px;padding:18px 50px;font-size:1.4rem;background:linear-gradient(135deg,#ff3d81,#ff77a9);color:white;border-radius:50px;text-decoration:none;animation:heartbeat 1.6s infinite}
-@keyframes float{50%{transform:translateY(-15px)}}
-@keyframes heartbeat{50%{transform:scale(1.08)}}
+body{
+  margin:0;
+  height:100vh;
+  background:linear-gradient(180deg,#ffd1e8,#ffe9f2);
+  font-family:'Segoe UI',sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:#ff2e75;
+}
+
+.card{
+  max-width:900px;
+  padding:40px 25px;
+  animation:fadeIn 1.5s ease;
+}
+
+h1{
+  font-size:3.5rem;
+  margin-bottom:30px;
+}
+
+p{
+  font-size:1.7rem;
+  line-height:1.7;
+  margin-bottom:40px;
+}
+
+.next{
+  display:inline-block;
+  padding:18px 55px;
+  font-size:1.4rem;
+  color:white;
+  text-decoration:none;
+  border-radius:60px;
+  background:linear-gradient(135deg,#ff4b8a,#ff8fb8);
+  animation:pulse 1.8s infinite;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;}
+}
+
+@keyframes pulse{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.08);}
+}
 </style>
 </head>
+
 <body>
+<div class="card">
 
 <h1>Rose Day 🌹</h1>
-<p>
-Haru 💗, if giving roses was easy right now, I would’ve done it without thinking twice.<br><br>
-So today I’m letting my feelings bloom here instead — soft, honest, and only for you.
-</p>
-
-<img class="big" src="https://images.unsplash.com/photo-1526045612212-70caf35c14df">
 
 <p>
-Every rose today carries my patience, my respect, and the quiet way I care about you 🌸
+Haru,<br><br>
+If roses could speak, they’d probably say what I can’t say easily.<br><br>
+That somewhere between normal conversations and quiet thoughts,<br>
+you slowly became special to me — without trying, without forcing.
 </p>
 
-<div class="cats">
-<img src="https://placekitten.com/300/300">
-<img src="https://placekitten.com/301/300">
-<img src="https://placekitten.com/302/300">
+<p>
+So today, instead of a rose in your hand,<br>
+I’m placing this feeling here — gently.
+</p>
+
+<a class="next" href="day2.html">Go to the next feeling 💗</a>
+
 </div>
-
-<a href="day2.html">Next feeling 💌</a>
 </body>
 </html>
