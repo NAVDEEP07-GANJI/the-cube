@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Valentine 💗</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:linear-gradient(180deg,#ffd1e8,#ffe8f2);
+  font-family:'Segoe UI',sans-serif;
+  overflow:hidden;
+  text-align:center;
+}
+.container{
+  position:relative;
+  z-index:2;
+  padding:60px 20px;
+  animation:fadeUp 1.5s ease;
+}
+h1{
+  color:#ff3f7f;
+  font-size:42px;
+  font-weight:800;
+}
+p{
+  font-size:20px;
+  color:#555;
+  max-width:700px;
+  margin:20px auto;
+  line-height:1.7;
+}
+a{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 36px;
+  background:#ff3f7f;
+  color:white;
+  border-radius:40px;
+  text-decoration:none;
+  font-size:18px;
+  transition:0.3s;
+}
+a:hover{transform:scale(1.1);}
+
+.heart{
+  position:absolute;
+  bottom:-20px;
+  font-size:24px;
+  animation:float 8s infinite ease-in;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);opacity:1;}
+  100%{transform:translateY(-120vh);opacity:0;}
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px);}
+  to{opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<script>
+for(let i=0;i<30;i++){
+ let h=document.createElement("div");
+ h.className="heart";
+ h.innerHTML="💗";
+ h.style.left=Math.random()*100+"vw";
+ h.style.animationDuration=(6+Math.random()*6)+"s";
+ document.body.appendChild(h);
+}
+</script>
+
+<div class="container">
+<h1>💗 THANK YOU FOR BEING MY VALENTINE 💗</h1>
+
+<p>
+Hey HARU 🌸<br><br>
+This is DEEPU.
+</p>
+
+<p>
+I didn’t know how much you liked Valentine week before,<br>
+but now I do — and I made this just for you.
+</p>
+
+<p>
+For now it’s not practical to give roses or teddies directly,<br>
+because it may raise doubts at your place.<br>
+So I’m conveying everything through this website 💕<br>
+<b>Next year — for sure.</b>
+</p>
+
+<a href="day1.html">Start Valentine Week 🌷</a>
+</div>
+
+</body>
+</html>
